@@ -1,0 +1,662 @@
+{
+	"info": {
+		"_postman_id": "9f42424c-32fa-4bd2-8b7d-5b4676f56628",
+		"name": "Atiq-Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10311820"
+	},
+	"item": [
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Get User Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "task 7",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "task description 7",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "incomplete",
+									"description": "'completed' , 'incomplete'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "dfdfasdsa2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "dfdasdsad2222",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "completed",
+									"description": "'completed','incomplete'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/task/:taskId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"task",
+								":taskId"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/tasks/:taskId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								":taskId"
+							],
+							"variable": [
+								{
+									"key": "taskId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task List",
+			"item": [
+				{
+					"name": "Get Task Lists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/task-lists",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"task-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Task List 2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Task List Description 2",
+									"type": "text"
+								},
+								{
+									"key": "task_ids[0]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "task_ids[1]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "task_ids[2]",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/task-lists",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"task-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task List",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "dfdfasdsa2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "dfdasdsad2222",
+									"type": "text"
+								},
+								{
+									"key": "task_ids[0]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "task_ids[1]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "task_ids[2]",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/task-lists/:taskListId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"task-lists",
+								":taskListId"
+							],
+							"variable": [
+								{
+									"key": "taskListId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task List",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/task-lists/:taskListId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"task-lists",
+								":taskListId"
+							],
+							"variable": [
+								{
+									"key": "taskListId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Task To Task List",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task_id\" : 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/task-lists/add-task/:taskListId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"task-lists",
+								"add-task",
+								":taskListId"
+							],
+							"variable": [
+								{
+									"key": "taskListId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Task from Task List",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task_id\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/task-lists/remove-task/:taskListId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"task-lists",
+								"remove-task",
+								":taskListId"
+							],
+							"variable": [
+								{
+									"key": "taskListId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shared Task Lists",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/shared-task-lists",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"shared-task-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shared Task List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shared_with",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "task_list_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "permission",
+									"value": "view",
+									"description": "'view', 'edit'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/shared-task-lists",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"shared-task-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Shared Task List Permission",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"permission\" : \"edit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/shared-task-lists/:sharedTaskListId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"shared-task-lists",
+								":sharedTaskListId"
+							],
+							"variable": [
+								{
+									"key": "sharedTaskListId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Shared Task List",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/shared-task-lists/:sharedTaskListId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"shared-task-lists",
+								":sharedTaskListId"
+							],
+							"variable": [
+								{
+									"key": "sharedTaskListId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log(jsonData);",
+							"pm.collectionVariables.set('token', jsonData.data.token)"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"msaeed.iu2@gmail.com\",\n    \"password\" : \"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Muhammad Saeed",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "msaeed.iu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "msaeed",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "admin123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Login user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/users/:username",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						":username"
+					],
+					"variable": [
+						{
+							"key": "username",
+							"value": "msaeed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:8000"
+		},
+		{
+			"key": "token",
+			"value": "3|mTILFgaW0JgDykG5NAGUEGbj1LFUlQiT7RAn9mhI321c7bde"
+		}
+	]
+}
